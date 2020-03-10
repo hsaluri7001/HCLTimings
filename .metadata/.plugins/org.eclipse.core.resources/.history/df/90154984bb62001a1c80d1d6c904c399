@@ -1,0 +1,23 @@
+package com.hcl.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hcl.service.EmployeeTimingService;
+
+@RestController
+@RequestMapping("hcl")
+public class HCLTimingsController {
+	
+	@Autowired
+	EmployeeTimingService employeeTimingService;
+	public String getTimingsById(Integer id)throws Exception {
+		return employeeTimingService.getTimingsById(id); 
+	}
+	
+	public String getTimingsByLocation(String location)throws Exception{
+		return employeeTimingService.getTimingsByLocation(location);
+	}
+
+}

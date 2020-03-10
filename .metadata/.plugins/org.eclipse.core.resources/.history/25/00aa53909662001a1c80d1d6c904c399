@@ -1,0 +1,14 @@
+package com.hcl;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+
+//@SpringBootApplication
+@EnableAutoConfiguration
+public class HclPocApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HclPocApplication.class, args);
+	}
+
+}

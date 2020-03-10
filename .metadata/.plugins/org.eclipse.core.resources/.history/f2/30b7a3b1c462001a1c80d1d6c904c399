@@ -1,0 +1,21 @@
+package com.hcl.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hcl.dao.EmployeeTimingsDAO;
+
+@Service
+public class EmployeeTimingService {
+
+	@Autowired
+	EmployeeTimingsDAO employeeDao;
+
+	public String getTimingsById(Integer id) throws Exception {
+		return employeeDao.getSwipeInAndSwipeOut(id);
+	}
+
+	public String getTimingsByLocation(String location) throws Exception {
+		return employeeDao.getSwipeInAndSwipeOut(location);
+	}
+}

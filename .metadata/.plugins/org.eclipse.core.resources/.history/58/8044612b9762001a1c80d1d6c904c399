@@ -1,0 +1,12 @@
+package com.hcl;
+
+import org.springframework.boot.SpringApplication;
+
+@SpringBootApplication
+public class HclPocApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HclPocApplication.class, args);
+	}
+
+}

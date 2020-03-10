@@ -1,0 +1,30 @@
+package com.hcl.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hcl.service.EmployeeTimingService;
+
+@RestController
+@RequestMapping("hcl")
+public class HCLTimingsController {
+
+	@Autowired
+	EmployeeTimingService employeeTimingService;
+
+	@GetMapping("/id")
+	public List<Object[]> getTimingsById(@PathVariable Integer id) throws Exception {
+		return employeeTimingService.getTimingsById(id);
+	}
+	
+	@GetMapping("/location")
+	public List<Object[]> getTimingsByLocation(@PathVariable String location) throws Exception {
+		return employeeTimingService.getTimingsByLocation(location);
+	}
+
+}

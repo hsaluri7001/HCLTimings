@@ -1,0 +1,23 @@
+package com.hcl.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.hcl.exception.UserNotFoundException;
+
+@RestController
+@RequestMapping("/api")
+public class UserController {
+
+	
+	@GetMapping("")
+	public String getUser(@PathVariable String name)throws Exception{
+		/*
+		 * if(!name.equals("harish")) { throw new UserNotFoundException("userNotFound");
+		 * }
+		 */
+		return "harish";
+	}
+}

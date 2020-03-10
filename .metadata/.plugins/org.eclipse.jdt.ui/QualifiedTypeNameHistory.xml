@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="com.hcl.exception.UserNotFoundException"/>
+<fullyQualifiedTypeName name="com.hcl.exception.RecordNotFoundException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.hcl.entity.Employee"/>
+<fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
+</qualifiedTypeNameHistroy>

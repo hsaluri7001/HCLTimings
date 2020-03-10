@@ -1,0 +1,12 @@
+package com.hcl.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.hcl.entity.EmployeeEntity;
+
+public interface EmployeeTimingsDAO extends JpaRepository<EmployeeEntity,Integer> {
+
+	
+	public String getSwipeInAndSwipeOut(Integer id);
+	public String getSwipeInAndSwipeOut(String location);
+}

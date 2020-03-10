@@ -1,0 +1,65 @@
+package com.hcl.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Employee {
+
+	@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="ID")
+	private Integer id;
+	public Employee(Integer id, String name, String swipeIn, String swipeOut, String location) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.swipeIn = swipeIn;
+		this.swipeOut = swipeOut;
+		this.location = location;
+	}
+	@Column(name="NAME")
+	private String name;
+	@Column(name="SWIPE_IN")
+	private String swipeIn;
+	@Column(name="SWIPE_OUT")
+	private String swipeOut;
+	@Column(name="LOCATION")
+	private String location;
+	
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSwipeIn() {
+		return swipeIn;
+	}
+	public void setSwipeIn(String swipeIn) {
+		this.swipeIn = swipeIn;
+	}
+	public String getSwipeOut() {
+		return swipeOut;
+	}
+	public void setSwipeOut(String swipeOut) {
+		this.swipeOut = swipeOut;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
+
+}

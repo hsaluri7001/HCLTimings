@@ -1,0 +1,34 @@
+package com.hcl.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hcl.dao.EmployeeTimingsDAO;
+import com.hcl.entity.EmployeeEntity;
+import com.hcl.exception.RecordNotFoundException;
+
+@Service
+public class EmployeeTimingService {
+
+	@Autowired
+	EmployeeTimingsDAO employeeDao;
+
+	public List<Object[]> getTimingsById(Integer id) throws Exception {
+		if (employeeDao.findByswipeInAndSwipeOut(id) == null && (employeeDao.findByswipeInAndSwipeOut(id).isEmpty())) {
+			throw new RecordNotFoundException("Record Not found for id" + id);
+		}
+		return employeeDao.findByswipeInAndSwipeOut(id);
+	}
+
+	public List<Object[]> getTimingsByLocation(String location) throws Exception {
+		if (employeeDao.findByswipeInAndSwipeOut(location) == null
+				&& (employeeDao.findByswipeInAndSwipeOut(location).isEmpty())) {
+			throw new RecordNotFoundException("Record Not found for location" + location);
+		}
+		return employeeDao.findByswipeInAndSwipeOut(location);
+	}
+
+	
+}

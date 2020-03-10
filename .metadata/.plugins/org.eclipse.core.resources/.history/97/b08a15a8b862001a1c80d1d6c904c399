@@ -1,0 +1,11 @@
+package com.hcl.beans;
+
+public class Employee {
+	
+	private Integer id; 
+	private String swipeIn;
+	private String swipeOut;
+	private String name;
+	private String location;
+
+}
